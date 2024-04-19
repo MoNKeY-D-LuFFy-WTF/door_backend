@@ -76,7 +76,7 @@
                 <div v-if="show.opens.length" class="opens">
                     <label class="open" v-for="open in show.opens" :key="open.id" :for="open.id + open.name">
                         {{ open.name }} {{ open.price }}
-                        <input :checked="data.combo.open.id !== undefined ? data.combo.open.id == open.id : false"
+                        <input :checked="data.combo !== undefined ? data.combo.open.id == open.id : false"
                             @change="changeRadio('open', $event)" :value="JSON.stringify(open)" type="radio" name="open"
                             :id="open.id + open.name">
                     </label>
@@ -95,7 +95,7 @@
                 <div v-if="show.thicks.length" class="opens">
                     <label class="open" v-for="thick in show.thicks" :key="thick.id" :for="thick.id + thick.name">
                         {{ thick.name }} {{ thick.price }}
-                        <input :checked="data.combo.thick.id !== undefined ? data.combo.thick.id == thick.id : false"
+                        <input :checked="data.combo !== undefined ? data.combo.thick.id == thick.id : false"
                             @change="changeRadio('thick', $event)" :value="JSON.stringify(thick)" type="radio"
                             name="thick" :id="thick.id + thick.name">
                     </label>
