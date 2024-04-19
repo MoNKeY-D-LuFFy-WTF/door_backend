@@ -1,0 +1,22 @@
+        
+        Door Color create form
+        <form action="http://127.0.0.1:8000/api/door_colors" method="post" enctype="multipart/form-data">
+        <input name="name" type="text">
+        <input name="price" type="number">
+        <input name="image" type="file">
+        <input name="image_door" type="file">
+        <select name="door_material" id="">
+            <option v-for="material in door.material" :value="material.id">{{ material.name }}</option>
+        </select>
+        <button type="submit">ok</button>
+    </form>
+      Door systtem open create form
+    <form action="http://127.0.0.1:8000/api/door_open_systems" method="post">
+        <input name="name" type="text">
+        <button type="submit">ok</button>
+    </form>
+      Door thick create form
+        <form action="http://127.0.0.1:8000/api/door_thicks" method="post">
+        <input name="name" type="text">
+        <button type="submit">ok</button>
+    </form>
